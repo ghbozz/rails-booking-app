@@ -11,7 +11,7 @@
 const events = [
     {
       title  : 'event1',
-      start  : '2019-02-10'
+      start  : '2019-02-10',
     },
     {
       title  : 'event2',
@@ -31,7 +31,7 @@ $('#calendar').fullCalendar({
   editable: true,
   selectable: true,
   header: {
-    left: 'prev,next today',
+    left: 'prev,next,today',
     center: 'title',
     right: 'month,agendaWeek,agendaDay,listMonth'
   },
@@ -54,4 +54,18 @@ function injectEvents(events) {
 }
 
 injectEvents(events);
+
+////////// REMOVE EVENTS /////////////
+
+// function removeEvent(event) {
+//   event.target.remove();
+// }
+
+
+// const eventsContainers = document.querySelectorAll('.fc-event-container a')
+
+// eventsContainers.forEach((event) => {
+//   addEventListener('click', removeEvent)
+// })
+
 

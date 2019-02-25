@@ -1,6 +1,7 @@
 .calendar-container-custom {
-  height: 800px;
-  width: 1000px;
+  margin-top: 50px;
+  height: 700px;
+  width: 900px;
 }
 
 .fc-sat {
@@ -12,5 +13,5 @@
 }
 
 .fc-day:hover {
-  background-color: rgba(30, 30, 30, 0.2);
+  background-color: rgb(228, 240, 243);
 }

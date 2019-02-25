@@ -15,3 +15,12 @@
 .fc-day:hover {
   background-color: rgb(228, 240, 243);
 }
+
+.fc-day-header {
+  background-color: rgb(228, 240, 244);
+}
+
+.fc-day-header span {
+  text-transform: capitalize;
+  color: rgb(0, 126, 198);
+}

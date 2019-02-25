@@ -28,11 +28,12 @@ const events = [
 $('#calendar').fullCalendar({
   themeSystem: 'bootstrap3',
   locale: 'fr',
+  editable: true,
   selectable: true,
   header: {
     left: 'prev,next today',
     center: 'title',
-    right: 'month,agendaWeek,agendaDay'
+    right: 'month,agendaWeek,agendaDay,listMonth'
   },
   dayClick: function(date) {
     alert('clicked ' + date.format());

@@ -9,16 +9,24 @@
 //= require fullcalendar/locale-all
 
 const events = [
-  { title: 'Event', start: '2019-02-27', end: '2019-03-01', color: 'red', editable: true },
-  { title: 'Event', start: '2019-02-01', end: '2019-02-01', color: 'blue', editable: true },
-  { title: 'Event', start: '2019-02-04', end: '2019-02-07', color: 'green', editable: true },
-  { title: 'Event', start: '2019-02-14', end: '2019-02-16', color: 'purple', editable: true },
-  { title: 'Event', start: '2019-02-15', end: '2019-02-16', color: 'black', editable: true },
-  { title: 'Event', start: '2019-02-07', end: '2019-02-08', color: 'orange', editable: true },
-  { title: 'Event', start: '2019-02-11', end: '2019-02-13', color: 'yellow', editable: true },
-]
+    {
+      title  : 'event1',
+      start  : '2019-02-10'
+    },
+    {
+      title  : 'event2',
+      start  : '2019-02-15',
+      end    : '2019-02-17'
+    },
+    {
+      title  : 'event3',
+      start  : '2019-02-18',
+      end    : '2019-02-19'
+    },
+  ]
 
 $('#calendar').fullCalendar({
+  themeSystem: 'bootstrap3',
   locale: 'fr',
   selectable: true,
   header: {

@@ -7,28 +7,8 @@
 //= require moment
 //= require fullcalendar
 //= require fullcalendar/locale-all
+//= require daterangepicker
 
-// const events = [
-//     {
-//       title  : 'event1',
-//       start  : '2019-02-10',
-//     },
-//     {
-//       title  : 'event2',
-//       start  : '2019-02-15',
-//       end    : '2019-02-17'
-//     },
-//     {
-//       title  : 'event3',
-//       start  : '2019-02-18',
-//       end    : '2019-02-19'
-//     },
-//     {
-//       title  : 'event4',
-//       start  : '2019-02-12',
-//       end    : '2019-02-14'
-//     },
-//   ]
 
 $('#calendar').fullCalendar({
   themeSystem: 'bootstrap3',
@@ -60,20 +40,19 @@ function injectEvents(events) {
   })
 }
 
-injectEvents(gon.events)
-// injectEvents(events);
-
-////////// REMOVE EVENTS /////////////
-
-// function removeEvent(event) {
-//   event.target.remove();
-// }
+if (document.getElementById('calendar')) {
+  injectEvents(gon.events)
+}
 
 
-// const eventsContainers = document.querySelectorAll('.fc-event-container a')
+/////// DATE RANGE PICKER //////////
 
-// eventsContainers.forEach((event) => {
-//   addEventListener('click', removeEvent)
-// })
+$(function() {
+  $('input[name="daterange"]').daterangepicker({
+    opens: 'left'
+  }, function(start, end, label) {
+    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+  });
+});
 
 

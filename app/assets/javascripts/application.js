@@ -48,6 +48,8 @@ if (document.getElementById('calendar')) {
 /////// DATE RANGE PICKER //////////
 
 
+
+
 $(document).ready(function() {
   $('.date_range').daterangepicker({
     locale: { cancelLabel: 'Clear' },

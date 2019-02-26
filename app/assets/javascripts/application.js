@@ -47,11 +47,23 @@ if (document.getElementById('calendar')) {
 
 /////// DATE RANGE PICKER //////////
 
-$(function() {
-  $('input[name="daterange"]').daterangepicker({
+$(document).ready(function() {
+  $('.date_range').daterangepicker({
+    ranges: {
+       'Today': [moment(), moment()],
+       'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+       'Last 7 Days': [moment().subtract('days', 6), moment()],
+       'Last 30 Days': [moment().subtract('days', 29), moment()],
+       'This Month': [moment().startOf('month'), moment().endOf('month')],
+       'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+    },
+    locale: { cancelLabel: 'Clear' },
+    format: 'YYYY-MM-DD',
     opens: 'left'
-  }, function(start, end, label) {
-    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+  });
+
+  $('.date_range').on('cancel.daterangepicker', function(ev, picker) {
+    $(this).val('');
   });
 });
 

@@ -22,6 +22,9 @@ gem 'momentjs-rails'
 
 gem 'jquery-rails'
 
+gem 'gon', '~> 6.2'
+gem 'rabl-rails'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end

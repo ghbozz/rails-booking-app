@@ -8,27 +8,27 @@
 //= require fullcalendar
 //= require fullcalendar/locale-all
 
-const events = [
-    {
-      title  : 'event1',
-      start  : '2019-02-10',
-    },
-    {
-      title  : 'event2',
-      start  : '2019-02-15',
-      end    : '2019-02-17'
-    },
-    {
-      title  : 'event3',
-      start  : '2019-02-18',
-      end    : '2019-02-19'
-    },
-    {
-      title  : 'event4',
-      start  : '2019-02-12',
-      end    : '2019-02-14'
-    },
-  ]
+// const events = [
+//     {
+//       title  : 'event1',
+//       start  : '2019-02-10',
+//     },
+//     {
+//       title  : 'event2',
+//       start  : '2019-02-15',
+//       end    : '2019-02-17'
+//     },
+//     {
+//       title  : 'event3',
+//       start  : '2019-02-18',
+//       end    : '2019-02-19'
+//     },
+//     {
+//       title  : 'event4',
+//       start  : '2019-02-12',
+//       end    : '2019-02-14'
+//     },
+//   ]
 
 $('#calendar').fullCalendar({
   themeSystem: 'bootstrap3',
@@ -43,9 +43,6 @@ $('#calendar').fullCalendar({
   dayClick: function(date) {
     alert('clicked ' + date.format());
   },
-  select: function(startDate, endDate) {
-    alert('selected ' + startDate.format() + ' to ' + endDate.format());
-  }
 });
 
 function addEvent(event) {
@@ -54,11 +51,17 @@ function addEvent(event) {
 
 function injectEvents(events) {
   events.forEach((event) => {
-    addEvent(event)
+    const event1 = {
+      title: event.title,
+      start: event.start_date,
+      end: event.end_date
+    }
+    addEvent(event1)
   })
 }
 
-injectEvents(events);
+injectEvents(gon.events)
+// injectEvents(events);
 
 ////////// REMOVE EVENTS /////////////
 

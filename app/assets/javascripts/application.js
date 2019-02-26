@@ -23,6 +23,11 @@ const events = [
       start  : '2019-02-18',
       end    : '2019-02-19'
     },
+    {
+      title  : 'event4',
+      start  : '2019-02-12',
+      end    : '2019-02-14'
+    },
   ]
 
 $('#calendar').fullCalendar({

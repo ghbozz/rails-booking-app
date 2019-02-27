@@ -2,10 +2,6 @@
   <div class="form-container">
     <%= simple_form_for @event do |f| %>
       <%= f.input :title %>
-
-      <%= simple_fields_for :other do |o| %>
-        <%= o.input :date_range, input_html: { class: "date_range" } %>
-      <% end %>
       <%= f.submit "Add Event", class: "btn btn-primary submit-btn" %>
     <% end %>
   </div>

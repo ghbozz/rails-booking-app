@@ -5,8 +5,6 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @event.start_date = params[:other]['date_range'].split('-').map { |d| d.gsub('/', '-')}[0].strip
-    @event.end_date = params[:other]['date_range'].split('-').map { |d| d.gsub('/', '-')}[1].strip
     @event.save
     redirect_to :root
   end

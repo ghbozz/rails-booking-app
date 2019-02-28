@@ -24,6 +24,7 @@ gem 'jquery-rails'
 
 gem 'gon', '~> 6.2'
 gem 'rabl-rails'
+
 gem 'bootstrap-daterangepicker-rails'
 
 group :development do
